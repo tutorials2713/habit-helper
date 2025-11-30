@@ -63,6 +63,9 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -80,10 +83,22 @@ export default {
             height: "0",
           },
         },
+        checkmark: {
+          "0%": {
+            transform: "scale(0) rotate(45deg)",
+          },
+          "50%": {
+            transform: "scale(1.2) rotate(45deg)",
+          },
+          "100%": {
+            transform: "scale(1) rotate(45deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        checkmark: "checkmark 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
     },
   },
